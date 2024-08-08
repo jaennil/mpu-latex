@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+while true
+    inotifywait -e modify $argv[1]
+    xelatex -interaction=nonstopmode $argv[1]
+end
